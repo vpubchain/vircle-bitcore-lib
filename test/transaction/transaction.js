@@ -1342,7 +1342,7 @@ describe('Transaction', function() {
       });
       describe('Bitcoin Core tests', function() {
         // from bitcoin core tests at src/test/transaction_tests.cpp
-        it('will verify pay-to-compressed publickey (v0) vp 1', function() {
+        it('will verify pay-to-compressed publickey (v0) vcl 1', function() {
           var check;
           var flags;
           var interpreter;
@@ -1363,7 +1363,7 @@ describe('Transaction', function() {
           check = interpreter.verify(scriptSig, scriptPubkey, input1, 0, flags, witnesses, satoshis);
           check.should.equal(true);
         });
-        it('will verify pay-to-compressed publickey (v0) vp 2', function() {
+        it('will verify pay-to-compressed publickey (v0) vcl 2', function() {
           var flags;
           var check;
           var interpreter;
@@ -1384,7 +1384,7 @@ describe('Transaction', function() {
           check = interpreter.verify(scriptSig, scriptPubkey, input2, 0, flags, witnesses, satoshis);
           check.should.equal(false);
         });
-        it('will verify p2sh witness pay-to-compressed pubkey (v0) vp 1', function() {
+        it('will verify p2sh witness pay-to-compressed pubkey (v0) vcl 1', function() {
           var flags;
           var check;
           var interpreter;
@@ -1405,7 +1405,7 @@ describe('Transaction', function() {
           check = interpreter.verify(scriptSig, scriptPubkey, input1, 0, flags, witnesses, satoshis);
           check.should.equal(true);
         });
-        it('will verify p2sh witness pay-to-compressed pubkey (v0) vp 2', function() {
+        it('will verify p2sh witness pay-to-compressed pubkey (v0) vcl 2', function() {
           var flags;
           var check;
           var interpreter;
@@ -1426,7 +1426,7 @@ describe('Transaction', function() {
           check = interpreter.verify(scriptSig, scriptPubkey, input2, 0, flags, witnesses, satoshis);
           check.should.equal(false);
         });
-        it('will verify witness 2-of-2 multisig (vp 1)', function() {
+        it('will verify witness 2-of-2 multisig (vcl 1)', function() {
           var flags;
           var check;
           var interpreter;
@@ -1447,7 +1447,7 @@ describe('Transaction', function() {
           check = interpreter.verify(scriptSig, scriptPubkey, input1, 0, flags, witnesses, satoshis);
           check.should.equal(false);
         });
-        it('will verify witness 2-of-2 multisig (vp 2)', function() {
+        it('will verify witness 2-of-2 multisig (vcl 2)', function() {
           var flags;
           var check;
           var interpreter;
@@ -1468,7 +1468,7 @@ describe('Transaction', function() {
           check = interpreter.verify(scriptSig, scriptPubkey, input2, 0, flags, witnesses, satoshis);
           check.should.equal(false);
         });
-        it('will verify witness 2-of-2 multisig (vp 3)', function() {
+        it('will verify witness 2-of-2 multisig (vcl 3)', function() {
           var flags;
           var check;
           var interpreter;
@@ -1484,7 +1484,7 @@ describe('Transaction', function() {
           check = interpreter.verify(scriptSig, scriptPubkey, input1, 0, flags, witnesses, satoshis);
           check.should.equal(true);
         });
-        it('will verify p2sh witness 2-of-2 multisig (vp 1)', function() {
+        it('will verify p2sh witness 2-of-2 multisig (vcl 1)', function() {
           var flags;
           var check;
           var interpreter;
@@ -1505,7 +1505,7 @@ describe('Transaction', function() {
           check = interpreter.verify(scriptSig, scriptPubkey, input1, 0, flags, witnesses, satoshis);
           check.should.equal(false);
         });
-        it('will verify p2sh witness 2-of-2 multisig (vp 2)', function() {
+        it('will verify p2sh witness 2-of-2 multisig (vcl 2)', function() {
           var flags;
           var check;
           var interpreter;
@@ -1526,7 +1526,7 @@ describe('Transaction', function() {
           check = interpreter.verify(scriptSig, scriptPubkey, input2, 0, flags, witnesses, satoshis);
           check.should.equal(false);
         });
-        it('will verify p2sh witness 2-of-2 multisig (vp 3)', function() {
+        it('will verify p2sh witness 2-of-2 multisig (vcl 3)', function() {
           var flags;
           var check;
           var interpreter;
@@ -1542,7 +1542,7 @@ describe('Transaction', function() {
           check = interpreter.verify(scriptSig, scriptPubkey, input1, 0, flags, witnesses, satoshis);
           check.should.equal(true);
         });
-        it('will verify witness pay-to-uncompressed-pubkey (v1) vp 1', function() {
+        it('will verify witness pay-to-uncompressed-pubkey (v1) vcl 1', function() {
           var flags;
           var check;
           var interpreter;
@@ -1564,7 +1564,7 @@ describe('Transaction', function() {
           check = interpreter.verify(scriptSig, scriptPubkey, input1, 0, flags, witnesses, satoshis);
           check.should.equal(true);
         });
-        it('will verify witness pay-to-uncompressed-pubkey (v1) vp 2', function() {
+        it('will verify witness pay-to-uncompressed-pubkey (v1) vcl 2', function() {
           var flags;
           var check;
           var interpreter;
@@ -1585,7 +1585,7 @@ describe('Transaction', function() {
           check = interpreter.verify(scriptSig, scriptPubkey, input2, 0, flags, witnesses, satoshis);
           check.should.equal(false);
         });
-        it('will verify p2sh witness pay-to-uncompressed-pubkey (v1) vp 1', function() {
+        it('will verify p2sh witness pay-to-uncompressed-pubkey (v1) vcl 1', function() {
           var flags;
           var check;
           var interpreter;
@@ -1606,7 +1606,7 @@ describe('Transaction', function() {
           check = interpreter.verify(scriptSig, scriptPubkey, input1, 0, flags, witnesses, satoshis);
           check.should.equal(true);
         });
-        it('will verify p2sh witness pay-to-uncompressed-pubkey (v1) vp 2', function() {
+        it('will verify p2sh witness pay-to-uncompressed-pubkey (v1) vcl 2', function() {
           var flags;
           var check;
           var interpreter;

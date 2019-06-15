@@ -617,19 +617,19 @@ describe('Script', function() {
     it('should classify scriptHashIn eventhough it is opreturn when script is marked is input', function() {
       Script('6a1c3630fd3792f7e847ae5e27985dfb127542ef37ac2a5147c3b9cec7ba').classify().should.equal(Script.types.DATA_OUT);
       var s = Script('6a1c3630fd3792f7e847ae5e27985dfb127542ef37ac2a5147c3b9cec7ba');
-      s._isInput = true; // this is normally set by when Script is initiated as vp if Input or Output objects
+      s._isInput = true; // this is normally set by when Script is initiated as vcl if Input or Output objects
       s.classify().should.equal(Script.types.SCRIPTHASH_IN);
     });
     it('should classify unknown eventhough it is public key hash when marked as input', function() {
       Script('OP_DUP OP_HASH160 20 0x0000000000000000000000000000000000000000 OP_EQUALVERIFY OP_CHECKSIG').classify().should.equal(Script.types.PUBKEYHASH_OUT);
       var s = Script('OP_DUP OP_HASH160 20 0x0000000000000000000000000000000000000000 OP_EQUALVERIFY OP_CHECKSIG');
-      s._isInput = true; // this is normally set by when Script is initiated as vp if Input or Output objects
+      s._isInput = true; // this is normally set by when Script is initiated as vcl if Input or Output objects
       s.classify().should.equal(Script.types.UNKNOWN);
     });
     it('should classify unknown eventhough it is public key hash in when marked as output', function() {
       var s = Script('47 0x3044022077a8d81e656c4a1c1721e68ce35fa0b27f13c342998e75854858c12396a15ffa02206378a8c6959283c008c87a14a9c0ada5cf3934ac5ee29f1fef9cac6969783e9801 21 0x03993c230da7dabb956292851ae755f971c50532efc095a16bee07f83ab9d262df');
       s.classify().should.equal(Script.types.PUBKEYHASH_IN);
-      s._isOutput = true; // this is normally set by when Script is initiated as vp if Input or Output objects
+      s._isOutput = true; // this is normally set by when Script is initiated as vcl if Input or Output objects
       s.classify().should.equal(Script.types.UNKNOWN);
     });
   });
