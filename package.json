@@ -1,8 +1,8 @@
 {
   "name": "vircle-bitcore-lib",
   "version": "0.16.0",
-  "description": "A pure and powerful JavaScript Vpub library.",
-  "author": "Vpub <hello@vircle.io>",
+  "description": "A pure and powerful JavaScript Vircle library.",
+  "author": "Vircle <hello@vircle.io>",
   "main": "index.js",
   "scripts": {
     "lint": "gulp lint",
