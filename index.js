@@ -12,8 +12,8 @@ bitcore.versionGuard = function(version) {
     throw new Error(message);
   }
 };
-bitcore.versionGuard(global._bitcoreVpub);
-global._bitcoreVpub = bitcore.version;
+bitcore.versionGuard(global._bitcoreVircle);
+global._bitcoreVircle = bitcore.version;
 
 // crypto
 bitcore.crypto = {};
